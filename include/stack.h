@@ -1,6 +1,9 @@
 #ifndef  _STACK_H_
 #define _STACK_H_
 
+#include <stdexcept>
+using namespace std;
+
 struct CNode {
   int data;
   CNode * next;
@@ -8,8 +11,12 @@ struct CNode {
 
 class stack {
   CNode *top;
+  CNode *min;
  public:
-  stack() {top = 0;}
+  stack() {
+    top = 0;
+    min = 0;
+  }
   void push(int);
   bool pop();
   int & getTop();

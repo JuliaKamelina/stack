@@ -30,9 +30,9 @@ TEST(test_stack, get_min_from_emty_stack) {
 TEST(test_stack, can_get_min) {
   stack S;
   S.push(2);
-  S.push(7);
-  S.push(3);
   S.push(0);
+  S.push(3);
+  S.push(7);
 
   EXPECT_EQ(0, S.getMin());
 }
